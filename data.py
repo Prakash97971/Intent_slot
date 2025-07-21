@@ -78,4 +78,4 @@ def preprocess_data(train, test):
 if __name__ == "__main__":
     tr, te = load_data()
     preprocess_data(tr, te)
-    print(f"✅ Artifacts saved in: {os.path.abspath(ARTIFACT_DIR)}")
+    print(f"Artifacts saved in: {os.path.abspath(ARTIFACT_DIR)}")

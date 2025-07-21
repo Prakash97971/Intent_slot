@@ -42,7 +42,7 @@ class ValF1Callback(Callback):
 
         mask = true_classes != 0  # ignore 'O' pad tag
         f1 = f1_score(true_classes[mask], pred_classes[mask], average='micro')
-        print(f"\n🎯 Val Slot F1: {f1:.4f}")
+        print(f"\n Val Slot F1: {f1:.4f}")
 
 def build_model(vocab_size, emb_dim, lstm_units, num_intents, num_slots):
     tokens = Input(shape=(MAX_LEN,), name="tokens")
@@ -114,7 +114,7 @@ def train_and_save():
     )
 
     model.save(MODEL_PATH)
-    print(f"✅ Model saved to {MODEL_PATH}")
+    print(f"Model saved to {MODEL_PATH}")
 
 def load_artifacts():
     tokenizer  = pickle.load(open(TOK_PATH, "rb"))
